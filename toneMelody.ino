@@ -1,137 +1,278 @@
 #include "pitches.h"
-
-int C=2;
-int D=3;
-int E=4;
-int F=5;
-int G=6;
-int A=7;
-int B=8;
-int C2=9;
-int ASD=10;
+ /* las siguientes notas no funcionan do+ si-*/ 
+byte  si1=33;
+byte  do2=35;
+byte  re2=39;
+byte  mi2=37;
+byte  fa2=32;
+byte  sol2=34;
+byte  la2=36;
+byte  si2=38;
+byte  do3=41;
+int  ASD=13;
+int val;
 
 
 void setup () {
-  pinMode(C,OUTPUT);
-  pinMode(D,OUTPUT);
-  pinMode(E,OUTPUT);
-  pinMode(F,OUTPUT);
-  pinMode(G,OUTPUT);
-  pinMode(A,OUTPUT);
-  pinMode(B,OUTPUT);
-  pinMode(C2,OUTPUT);
+  pinMode(si1,OUTPUT);
+  pinMode(do2,OUTPUT);
+  pinMode(re2,OUTPUT);
+  pinMode(mi2,OUTPUT);
+  pinMode(fa2,OUTPUT);
+  pinMode(sol2,OUTPUT);
+  pinMode(la2,OUTPUT);
+  pinMode(si2,OUTPUT);
+  pinMode(do3,OUTPUT);
   pinMode(ASD,OUTPUT);
+  Serial.begin(9600);
+  int voltaje=2;
+  Serial.print("voltaje de funcionamiento: ");
+  Serial.print(voltaje);
+  Serial.println("v");
+  voltaje=map(voltaje,0,5,0,255);
+  Serial.print("voltaje de motores: ");
+  Serial.print(voltaje);
+  Serial.println("v");
+  voltaje=val;
+  delay(3000);
+  
 }
 
 void loop () {
   tone(ASD,NOTE_G5);
+  digitalWrite(sol2,HIGH);
+  Serial.println("Sol");
   delay(500);
+  digitalWrite(sol2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(250);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_D5);
+  digitalWrite(re2,HIGH);
+  Serial.println("Re"); 
   delay(250);
+  digitalWrite(re2,LOW); 
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_E5);
+  digitalWrite(mi2,HIGH); 
+  Serial.println("Mi");
   delay(250);
+  digitalWrite(mi2,LOW); 
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_F5);
+  digitalWrite(fa2,HIGH); 
+  Serial.println("Fa");
   delay(250);
+  digitalWrite(fa2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_G5);
+  digitalWrite(sol2,HIGH);
+  Serial.println("Sol");
   delay(500);
+  digitalWrite(sol2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(500);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  
   delay(20);
+  
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(500);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_A5);
+  digitalWrite(la2,HIGH);
+  Serial.println("La");
   delay(500);
+  digitalWrite(la2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_F5);
+  digitalWrite(fa2,HIGH);
+  Serial.println("Fa");
   delay(250);
+  digitalWrite(fa2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_G5);
+  digitalWrite(sol2,HIGH);
+  Serial.println("Sol");
   delay(250);
+  digitalWrite(sol2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_A5);
+  digitalWrite(la2,HIGH);
+  Serial.println("La");
   delay(250);
+  digitalWrite(la2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_B5);
+  digitalWrite(si2,HIGH);
+  Serial.println("Si");
   delay(250);
+  digitalWrite(si2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C6);
+  digitalWrite(do3,HIGH);
+  Serial.println("Do+1");
   delay(500);
+  digitalWrite(do3,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(500);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(500);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_F5);
+  digitalWrite(fa2,HIGH);
+  Serial.println("Fa");
   delay(500);
+  digitalWrite(fa2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_G5);
+  digitalWrite(sol2,HIGH);
+  Serial.println("Sol");
   delay(250);
+  digitalWrite(sol2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_F5);
+  digitalWrite(fa2,HIGH);
+  Serial.println("Fa");
   delay(250);
+  digitalWrite(fa2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_E5);
+  digitalWrite(mi2,HIGH);
+  Serial.println("Mi");
   delay(250);
+  digitalWrite(mi2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_D5);
+  digitalWrite(re2,HIGH);
+  Serial.println("Re");
   delay(250);
+  digitalWrite(re2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_E5);
+  digitalWrite(mi2,HIGH);
+  Serial.println("Mi");
   delay(500);
+  digitalWrite(mi2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_F5);
+  digitalWrite(fa2,HIGH);
+  Serial.println("Fa");
   delay(250);
+  digitalWrite(fa2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_E5);
+  digitalWrite(mi2,HIGH);
+  Serial.println("Mi");
   delay(250);
+  digitalWrite(mi2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_D5);
+  digitalWrite(re2,HIGH);
+  Serial.println("Do");
   delay(250);
+  digitalWrite(re2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(250);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_B4);
+  digitalWrite(si1,HIGH);
+  Serial.println("Si");
   delay(500);
+  digitalWrite(si1,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(250);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_D5);
+  digitalWrite(re2,HIGH);
+  Serial.println("Re");
   delay(250);
+  digitalWrite(re2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_E5);
+  digitalWrite(mi2,HIGH);
+  Serial.println("Mi");
   delay(250);
+  digitalWrite(do2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_D5);
+  digitalWrite(re2,HIGH);
+  Serial.println("Re");
   delay(250);
+  digitalWrite(re2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_E5);
+  digitalWrite(mi2,HIGH);
+  Serial.println("Mi");
   delay(1500);
+  digitalWrite(mi2,LOW);
   noTone(ASD);
+  /*-----------------------------------*/
   tone(ASD,NOTE_C5);
+  digitalWrite(do2,HIGH);
+  Serial.println("Do");
   delay(1500);
+  digitalWrite(do2,LOW);
   noTone(ASD);
-  
-  
-  
-  
-  
-  
+  /*-----------------------------------*/
+  Serial.println("------------------------------------------------");
   delay(5000);
-  
-  
   
 }
